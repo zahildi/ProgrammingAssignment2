@@ -1,5 +1,5 @@
 ## the MakeCacheMatrix stores the functions required to create the inverse 
-## of a matrix and stores that inverse if the fucnction is called again
+## of a matrix and stores that inverse if the function is called again
 
 makeCacheMatrix <- function(x = matrix()) {
 
