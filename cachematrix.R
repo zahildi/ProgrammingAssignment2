@@ -1,6 +1,5 @@
-
-## the MakeCacheMatrix stores the functions required to create the matrix
-## and store the inverse if the inverse of the matrix is called again
+## the MakeCacheMatrix stores the functions required to create the inverse 
+## of a matrix and stores that inverse if the fucnction is called again
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -18,15 +17,16 @@ makeCacheMatrix <- function(x = matrix()) {
     
 }
 
-
-## Write a short comment describing this function
+## this function calls functions from makeCacheMatrix. It first checks if
+## there is already an inverse of the matrix stored in m in makeCacheMatrix
+## and recalls that result, rather than recalculating
 
 cacheSolve <- function(x, ...) {
 ## Return a matrix that is the inverse of 'x'
     
     m <- x$getinv()
     if(!is.null(m)) {
-        message("getting cached data")
+        message("retriving from cache")
         return(m)
     }
     data <- x$get()
